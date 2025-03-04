@@ -23,11 +23,20 @@ st.write("""
 The chart below shows the evolution of stock prices over the years.
 """)
 
-selected_stocks = st.multiselect("Choose the stocks to visualize",data.columns)
+st.sidebar.header('Filters')
+#Stock Filter
+selected_stocks = st.sidebar.multiselect("Choose the stocks to visualize",data.columns)
 if selected_stocks:
   data = data[selected_stocks]
   if len(selected_stocks) == 1:
     single_stock = selected_stocks[0]
     data = data.rename(columns={single_stock: "Close"})
+
+#Date Filter
+start_date = data.index.min().to_pydatetime()
+end_date = data.index.max().to_pydatetime()
+date_range = st.sidebar.slider("Select the period", min_value = start_date, max_value = end_date, value = (start_date, end_date))
+
+data = data.loc[date_range[0]:date_range[1]]
 
 st.line_chart(data)
