@@ -1,6 +1,6 @@
 # Stream Biz
 
-Stream Biz is an application built with Streamlit to analyze historical closing data of Itaú's stock (ITUB4) since January 1st, 2010. The goal is to provide insights and interactive visualizations of the stock's behavior over time.
+Stream Biz is an application built with Streamlit to analyze historical stock closing data since January 1st, 2010. The goal is to provide insights and interactive visualizations of the stock's behavior over time.
 
 ## Technologies Used
 
