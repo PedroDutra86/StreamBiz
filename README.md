@@ -16,19 +16,8 @@ Stream Biz is an application built with Streamlit to analyze historical closing 
 
 ## How to Run the Project
 
-1. Clone the repository:
-
-   ```bash
+```bash
    git clone https://github.com/your-username/stream-biz.git
-   
-2. Install the required dependencies:
-
-  ```bash
-  pip install -r requirements.txt
-
-3. Run the Streamlit app:
-
-  ```bash
-  streamlit run app.py
-
-4. The app will open in your default browser.
+   cd stream-biz
+   pip install -r requirements.txt
+   streamlit run app.py
