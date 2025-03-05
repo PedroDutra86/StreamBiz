@@ -10,9 +10,14 @@ Stream Biz is an application built with Streamlit to analyze historical stock cl
 
 ## Features
 
-- Interactive display of stocks closing data.
-- Graphs and metrics that allow visualization of stock price trends over time.
-- Filters to customize the analysis (specific periods, etc.).
+- Interactive display of stock closing prices.
+- Graphs that allow visualization of stock price trends over time.
+- Sidebar filters to customize the analysis:
+  - Selection of specific stocks.
+  - Adjustable date range with a slider.
+- Portfolio performance calculation:
+  - Displays individual stock performance over the selected period.
+  - Calculates overall portfolio performance based on an initial fixed investment.
 
 ## How to Run the Project
 
@@ -21,3 +26,5 @@ Stream Biz is an application built with Streamlit to analyze historical stock cl
    cd stream-biz
    pip install -r requirements.txt
    streamlit run app.py
+```
+
