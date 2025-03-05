@@ -6,6 +6,11 @@ from datetime import datetime, timedelta
 import os
 # Funções de carregamento de dados
 
+st.set_page_config(
+    page_title="Stream Biz",
+    page_icon="📊",  
+)
+
 @st.cache_data
 def load_data(companies):
     end_date = datetime.today()
