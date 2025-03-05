@@ -3,8 +3,9 @@ import streamlit as st
 import pandas as pd
 import yfinance as yf
 from datetime import datetime, timedelta
-
+import os
 # Funções de carregamento de dados
+
 @st.cache_data
 def load_data(companies):
     end_date = datetime.today()
@@ -14,9 +15,10 @@ def load_data(companies):
     stock_prices = stock_prices["Close"]
     return stock_prices
 
+file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "IBOV.csv"))
 @st.cache_data
 def load_stock_tickers():
-    base_tickers = pd.read_csv(r"C:\Users\conta\Documents\Estudos\Streamlit\data\IBOV.csv", sep=";")
+    base_tickers = pd.read_csv(file_path, sep=";")
     tickers = list(base_tickers["Código"])
     tickers = [item + ".SA" for item in tickers]
     return tickers
